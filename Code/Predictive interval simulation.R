@@ -8,7 +8,7 @@ library(gridExtra)
 library(hrbrthemes)
 
 # MCMC result
-Bay_sample = read.csv("C:/Users/Ken Peng/Desktop/IR model coding/sampling_results/2018 season/BC_sample_TRIMPi_2018_repara.csv",sep = " ")
+Bay_sample = read.csv("BC_sample_TRIMPi_2018.csv",sep = " ")
 
 
 y = matrix(, nrow = 365, ncol = 1000)
