@@ -7,6 +7,7 @@ library(ggplot2)
 library(gridExtra)
 library(hrbrthemes)
 
+# MCMC result
 Bay_sample = read.csv("C:/Users/Ken Peng/Desktop/IR model coding/sampling_results/2018 season/BC_sample_TRIMPi_2018_repara.csv",sep = " ")
 
 
@@ -72,24 +73,3 @@ p1
 
 
 
-
-
-
-
-
-
-
-## MCMC process
-par(mfrow=c(3,2))
-ts.plot(Bay_sample$k1, ylim = c(0, 0.06), ylab = "k1", xlab = "Iteration number")
-ts.plot(Bay_sample$k2, ylim = c(0, 0.08), ylab = "k2", xlab = "Iteration number")
-ts.plot(Bay_sample$p0, ylim = c(1030, 1050), ylab = "p0", xlab = "Iteration number")
-ts.plot(Bay_sample$pp, ylim = c(0, 1), ylab = "rho", xlab = "Iteration number")
-ts.plot(Bay_sample$t1, ylim = c(25, 50), ylab = "t1", xlab = "Iteration number")
-ts.plot(Bay_sample$t2, ylim = c(10, 30), ylab = "t2", xlab = "Iteration number")
-
-
-## est
-library(EnvStats)
-egamma(Bay_sample$ss)
-ebeta(Bay_sample$pp)
